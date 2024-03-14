@@ -1513,6 +1513,8 @@ strong {
   height: 194px;
   margin-top: 70px;
   background-image: url(../../assets/img/data-img/data1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .data__wrap {
   display: flex;
@@ -1691,6 +1693,10 @@ strong {
 }
 .menu-tab__content {
   margin-top: 30px;
+  display: none;
+}
+.menu-tab__content--active {
+  display: block;
 }
 
 .menu-wrap {
@@ -1701,6 +1707,8 @@ strong {
 }
 .menu-wrap__img {
   width: 76px;
+  height: 76px;
+  border-radius: 50%;
   object-fit: cover;
 }
 .menu-wrap__name, .menu-wrap__price {
