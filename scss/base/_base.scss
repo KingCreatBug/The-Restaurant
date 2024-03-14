@@ -16,9 +16,19 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: "Libre Bodoni", sans-serif;
-    color: var(--text-color);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: var(--text-color-second);
     background: var(--body-bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Libre Bodoni", sans-serif;
+    color: var(--text-color-heading);
 }
 
 a {
@@ -60,17 +70,6 @@ input:-webkit-autofill:hover {
     transition: background-color 1s 99999s;
     -webkit-text-fill-color: var(--text-color);
     caret-color: var(--text-color);
-}
-
-.icon {
-    filter: var(--icon-color);
-}
-
-.container {
-    @include abstracts.screen(sm) {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-    }
 }
 
 i,

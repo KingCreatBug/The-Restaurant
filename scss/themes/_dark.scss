@@ -1,5 +1,7 @@
-html.dark {
-    --text-color: #fff;
+:root {
+    --text-color-heading: #fff;
+    --text-color-second: rgba(255, 255, 255, 0.8);
+    --text-color-hover: rgba(251, 143, 44, 1);
     --body-bg-color: #111114;
     --icon-color: #fff;
     --separate-bg-color: rgba(255, 255, 255, 0.8);
