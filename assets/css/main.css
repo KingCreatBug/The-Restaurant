@@ -1348,7 +1348,7 @@ strong {
   --text-color-hover: rgba(251, 143, 44, 1);
   --body-bg-color: #111114;
   --icon-color: #fff;
-  --separate-bg-color: rgba(255, 255, 255, 0.8);
+  --separate-bg-color: rgba(248, 248, 248, 0.204);
 }
 
 .navbar__list, .header-right, .header__inner {
@@ -1436,7 +1436,7 @@ strong {
   color: var(--text-color-hover);
 }
 
-.time-list__item, .time-list, .dish__all, .dish-card__oder, .dish-card__wrap, .dish__content, .data__item, .hero {
+.menu-wrap__left, .menu-wrap, .menu__content, .time-list__item, .time-list, .dish__all, .dish-card__oder, .dish-card__wrap, .dish__content, .data__item, .hero {
   display: flex;
   align-items: center;
 }
@@ -1643,6 +1643,73 @@ strong {
 .time-list__time {
   text-align: end;
   width: 113px;
+}
+
+.menu {
+  margin-top: 26px;
+  padding: 70px 0;
+}
+.menu__content {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.menu__sub-title {
+  line-height: 1.62;
+}
+.menu__title {
+  margin-top: 10px;
+  font-size: 6.4rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.menu__desc {
+  width: 601px;
+  margin-top: 20px;
+  line-height: 1.62;
+}
+.menu-container {
+  margin-top: 60px;
+}
+
+.menu-tab__list {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 30px;
+}
+.menu-tab__item {
+  font-family: "Libre Bodoni", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.33;
+  cursor: pointer;
+}
+.menu-tab__item--active {
+  color: var(--text-color-hover);
+  cursor: default;
+}
+.menu-tab__content {
+  margin-top: 30px;
+}
+
+.menu-wrap {
+  justify-content: space-between;
+}
+.menu-wrap__left {
+  gap: 20px;
+}
+.menu-wrap__img {
+  width: 76px;
+  object-fit: cover;
+}
+.menu-wrap__name, .menu-wrap__price {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.33;
+}
+.menu-wrap__name {
+  width: 60%;
 }
 
 /*# sourceMappingURL=main.css.map */

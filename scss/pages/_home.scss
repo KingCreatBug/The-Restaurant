@@ -16,6 +16,7 @@
     margin-top: 26px;
 }
 
+// Hero
 .hero {
     @extend %flexItemCenter;
 
@@ -93,6 +94,7 @@
     }
 }
 
+// Data
 .data {
     height: 194px;
     margin-top: 70px;
@@ -128,6 +130,7 @@
     }
 }
 
+// Dish
 .dish {
     margin-top: 139px;
     padding: 48px 0;
@@ -207,6 +210,7 @@
     }
 }
 
+// Time
 .time {
     display: flex;
     margin-top: 48px;
@@ -274,5 +278,91 @@
             text-align: end;
             width: 113px;
         }
+    }
+}
+
+// Menu
+.menu {
+    margin-top: 26px;
+    padding: 70px 0;
+
+    &__content {
+        @extend %flexItemCenter;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__sub-title {
+        line-height: 1.62;
+    }
+
+    &__title {
+        margin-top: 10px;
+        font-size: 6.4rem;
+        font-weight: 500;
+        line-height: 1.15;
+    }
+
+    &__desc {
+        width: 601px;
+        margin-top: 20px;
+        line-height: 1.62;
+    }
+
+    &-container {
+        margin-top: 60px;
+    }
+}
+
+.menu-tab {
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        font-family: "Libre Bodoni", sans-serif;
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 1.33;
+        cursor: pointer;
+
+        &--active {
+            color: var(--text-color-hover);
+            cursor: default;
+        }
+    }
+
+    &__content {
+        margin-top: 30px;
+    }
+}
+
+.menu-wrap {
+    @extend %flexItemCenter;
+    justify-content: space-between;
+
+    &__left {
+        @extend %flexItemCenter;
+        gap: 20px;
+    }
+
+    &__img {
+        width: 76px;
+        object-fit: cover;
+    }
+
+    &__name,
+    &__price {
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 1.33;
+    }
+
+    &__name {
+        width: 60%;
     }
 }
