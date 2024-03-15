@@ -134,8 +134,17 @@
 
 // Dish
 .dish {
+    position: relative;
     margin-top: 139px;
     padding: 48px 0;
+
+    &__flower {
+        position: absolute;
+        top: 44px;
+        left: 203px;
+        rotate: 180deg;
+        z-index: -1;
+    }
 
     &__content {
         @extend %flexItemCenter;
@@ -150,6 +159,10 @@
         font-size: 6.4rem;
         line-height: 1.15;
         text-transform: capitalize;
+
+        &--large {
+            font-size: 9.8rem;
+        }
     }
 
     &__desc {
@@ -373,5 +386,163 @@
 
     &__name {
         width: 60%;
+    }
+}
+
+// Service
+.service {
+    margin-top: 19px;
+    padding: 61px 0;
+
+    &__content {
+        @extend %flexItemCenter;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 6.4rem;
+        font-weight: 500;
+        line-height: 1.15;
+        text-transform: capitalize;
+    }
+
+    &__desc {
+        width: 625px;
+        line-height: 1.62;
+    }
+
+    &__wrap {
+        display: flex;
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    &__images {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__image {
+        &--small {
+            width: 370px;
+            height: 285px;
+            object-fit: cover;
+            border: 1px solid #fff;
+        }
+
+        &--large {
+            width: 370px;
+            height: 600px;
+            object-fit: cover;
+            border: 1px solid #fff;
+        }
+    }
+}
+
+// Booking
+.booking {
+    position: relative;
+    display: flex;
+    margin-top: 105px;
+
+    &__wow {
+        position: absolute;
+        top: -70px;
+        right: -70px;
+    }
+
+    &-left {
+        width: 50%;
+        height: 394px;
+        padding: 40px;
+        background: var(--text-color-hover);
+        color: #111114;
+
+        &__title {
+            color: #111114;
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 1.25;
+            text-transform: capitalize;
+        }
+
+        &__btn {
+            --height: 56px;
+
+            width: 311px;
+            height: var(--height);
+            background: #111114;
+            margin-top: 74px;
+
+            color: #fff;
+            font-size: 1.6rem;
+            text-align: center;
+            line-height: var(--height);
+            border-radius: 12px;
+        }
+    }
+
+    &-right {
+        width: 50%;
+
+        &__img {
+            height: 394px;
+            object-fit: cover;
+            background: linear-gradient(
+                to left,
+                rgba(251, 248, 252, 1),
+                rgba(251, 248, 252, 0.09)
+            );
+            padding: 1px;
+        }
+    }
+}
+
+.booking-containers {
+    @extend %flexItemCenter;
+    gap: 99px;
+    margin-top: 40px;
+}
+
+.booking-container {
+    &__title {
+        color: #111114;
+        font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 1.41;
+        text-transform: capitalize;
+    }
+
+    &__wrap {
+        @extend %flexItemCenter;
+        gap: 3px;
+        margin-top: 10px;
+    }
+
+    &__date {
+        font-family: "Libre Bodoni";
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+
+    &__set {
+        height: 35px;
+        @extend %flexItemCenter;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    &__icon {
+        display: block;
+        cursor: pointer;
     }
 }
