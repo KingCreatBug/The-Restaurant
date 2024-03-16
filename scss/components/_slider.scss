@@ -1,0 +1,29 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+// Slider
+.slider {
+    margin-top: 150px;
+    background: var(--text-color-hover);
+
+    &-wraps {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+    }
+
+    &-wrap {
+        @extend %flexItemCenter;
+        gap: 18px;
+
+        &__text {
+            color: #111114;
+            font-size: 3.8rem;
+            font-weight: 500;
+        }
+    }
+}

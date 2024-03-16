@@ -37,7 +37,7 @@
     }
 
     &__desc {
-        width: 79%;
+        width: 75%;
         margin-top: 20px;
         line-height: 1.62;
     }
@@ -48,6 +48,11 @@
         display: block;
         margin-top: 40px;
         color: var(--text-color-hover);
+
+        &:hover {
+            opacity: 0.8;
+            transition: 0.25s;
+        }
     }
 
     &__images {
@@ -125,103 +130,10 @@
     }
 
     &__text {
-        width: 148px;
+        width: 50%;
         font-weight: 500;
         font-size: 2.4rem;
         line-height: 1.42;
-    }
-}
-
-// Dish
-.dish {
-    position: relative;
-    margin-top: 139px;
-    padding: 48px 0;
-
-    &__flower {
-        position: absolute;
-        top: 44px;
-        left: 203px;
-        rotate: 180deg;
-        z-index: -1;
-    }
-
-    &__content {
-        @extend %flexItemCenter;
-
-        justify-content: center;
-        flex-direction: column;
-        margin-bottom: 60px;
-    }
-
-    &__title {
-        font-weight: 500;
-        font-size: 6.4rem;
-        line-height: 1.15;
-        text-transform: capitalize;
-
-        &--large {
-            font-size: 9.8rem;
-        }
-    }
-
-    &__desc {
-        width: 601px;
-        margin-top: 20px;
-        text-align: center;
-        line-height: 1.62;
-    }
-
-    &-card {
-        &__img {
-            display: block;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        &__wrap {
-            @extend %flexItemCenter;
-
-            justify-content: space-between;
-            margin-top: 16px;
-        }
-
-        &__name,
-        &__price {
-            font-weight: 500;
-            font-size: 2.4rem;
-            line-height: 1.42;
-        }
-
-        &__desc {
-            margin-top: 6px;
-            line-height: 1.62;
-        }
-
-        &__oder {
-            @extend %flexItemCenter;
-            @extend %underline;
-
-            justify-content: space-between;
-            margin-top: 16px;
-            line-height: 1.62;
-        }
-
-        &__stars {
-            display: flex;
-            gap: 6px;
-        }
-    }
-
-    &__all {
-        @extend %flexItemCenter;
-        @extend %underline;
-
-        justify-content: center;
-        gap: 13px;
-        margin-top: 30px;
-
-        color: var(--text-color-hover);
     }
 }
 
@@ -296,99 +208,6 @@
     }
 }
 
-// Menu
-.menu {
-    margin-top: 26px;
-    padding: 70px 0;
-
-    &__content {
-        @extend %flexItemCenter;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    &__sub-title {
-        line-height: 1.62;
-    }
-
-    &__title {
-        margin-top: 10px;
-        font-size: 6.4rem;
-        font-weight: 500;
-        line-height: 1.15;
-    }
-
-    &__desc {
-        width: 601px;
-        margin-top: 20px;
-        line-height: 1.62;
-    }
-
-    &-container {
-        margin-top: 60px;
-    }
-}
-
-.menu-tab {
-    &__list {
-        display: flex;
-        justify-content: center;
-        gap: 60px;
-        margin-bottom: 30px;
-    }
-
-    &__item {
-        font-family: "Libre Bodoni", sans-serif;
-        font-weight: 500;
-        font-size: 3rem;
-        line-height: 1.33;
-        cursor: pointer;
-
-        &--active {
-            color: var(--text-color-hover);
-            cursor: default;
-        }
-    }
-
-    &__content {
-        margin-top: 30px;
-        display: none;
-
-        &--active {
-            display: block;
-        }
-    }
-}
-
-.menu-wrap {
-    @extend %flexItemCenter;
-    justify-content: space-between;
-
-    &__left {
-        @extend %flexItemCenter;
-        gap: 20px;
-    }
-
-    &__img {
-        width: 76px;
-        height: 76px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    &__name,
-    &__price {
-        font-weight: 500;
-        font-size: 3rem;
-        line-height: 1.33;
-    }
-
-    &__name {
-        width: 60%;
-    }
-}
-
 // Service
 .service {
     margin-top: 19px;
@@ -408,7 +227,7 @@
     }
 
     &__desc {
-        width: 625px;
+        width: 53%;
         line-height: 1.62;
     }
 
@@ -476,11 +295,16 @@
             background: #111114;
             margin-top: 74px;
 
-            color: #fff;
+            color: var(--text-color-heading);
             font-size: 1.6rem;
             text-align: center;
             line-height: var(--height);
             border-radius: 12px;
+
+            &:hover {
+                color: var(--text-color-hover);
+                transition: 0.25s;
+            }
         }
     }
 
@@ -544,5 +368,314 @@
     &__icon {
         display: block;
         cursor: pointer;
+    }
+}
+
+// Daily
+.daily {
+    margin-top: 150px;
+
+    &-content {
+        margin-bottom: 52px;
+        text-align: center;
+
+        &__title {
+            font-size: 6.4rem;
+            font-weight: 500;
+            line-height: 1.15;
+            text-transform: capitalize;
+        }
+    }
+
+    &-container {
+        &__wraps {
+            height: 434px;
+            padding: 23px 30px;
+            background-image: url(../../assets/img/daily-img/daily-bg.png);
+            background-size: cover;
+        }
+
+        &__wrap {
+            padding: 72px 245px 40px 41px;
+            border-width: 1px;
+            border-style: solid;
+            border-image: linear-gradient(
+                    to right,
+                    rgba(251, 248, 252, 1),
+                    rgba(251, 248, 252, 0.09)
+                )
+                1;
+        }
+    }
+
+    &-wrap {
+        &__caption {
+            font-family: "Plus Jakarta Sans";
+            font-size: 2.8rem;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        &__sub-title {
+            margin-top: 8px;
+            font-size: 2.6rem;
+
+            &--large {
+                color: var(--text-color-hover);
+                font-family: "Playball", sans-serif;
+                font-size: 8.4rem;
+            }
+        }
+
+        &__desc {
+            margin-top: 8px;
+            line-height: 1.62;
+        }
+
+        &__btn {
+            --heigh: 42px;
+
+            display: block;
+            width: 145px;
+            height: var(--height);
+            margin-top: 40px;
+            background: rgba(251, 143, 44, 0.8);
+
+            text-align: center;
+            font-weight: 600;
+            line-height: var(--heigh);
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &-box {
+        @extend %flexItemCenter;
+        gap: 28px;
+
+        &__img {
+            width: 130px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        &__inner {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__title {
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 1.41;
+            text-transform: capitalize;
+        }
+
+        &__desc {
+            width: 80%;
+            margin-top: 16px;
+            line-height: 1.62;
+        }
+
+        &__price {
+            font-family: "Libre Bodoni";
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 1.33;
+        }
+    }
+}
+
+.daily-box + .daily-box {
+    margin-top: 36px;
+}
+
+// Cook
+.cook {
+    margin-top: 150px;
+
+    &-content {
+        @extend %flexItemCenter;
+        flex-direction: column;
+        text-align: center;
+
+        &__title {
+            font-size: 6.4rem;
+            font-weight: 500;
+            line-height: 1.15;
+            text-transform: capitalize;
+        }
+
+        &__desc {
+            width: 66%;
+            margin-top: 16px;
+            line-height: 1.62;
+        }
+    }
+
+    &-list {
+        position: relative;
+        margin-top: 40px;
+
+        &__icon {
+            position: absolute;
+            top: -46px;
+            left: -51px;
+        }
+    }
+
+    &-item {
+        text-align: center;
+
+        &__img {
+            width: 100%;
+        }
+
+        &__name {
+            margin-top: 30px;
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 1.33;
+        }
+    }
+}
+
+// Post
+.post {
+    margin-top: 150px;
+
+    &-content {
+        text-align: center;
+
+        &__sub-title {
+            line-height: 1.62;
+        }
+
+        &__title {
+            margin-top: 20px;
+            font-size: 6.4rem;
+            font-weight: 500;
+            line-height: 1.15;
+            text-transform: capitalize;
+        }
+    }
+
+    &-wrap {
+        margin-top: 60px;
+
+        &__img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__sub-title {
+            line-height: 1.62;
+        }
+
+        &__title {
+            margin-top: 20px;
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 1.33;
+        }
+
+        &__desc {
+            margin-top: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.55;
+        }
+
+        &__link {
+            display: block;
+            margin-top: 30px;
+            color: var(--text-color-heading);
+            line-height: 1.62;
+            @extend %underline;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &-box {
+        @extend %flexItemCenter;
+        gap: 111px;
+        margin-top: 30px;
+    }
+
+    &-link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 40px;
+
+        &__text {
+            color: var(--text-color-hover);
+        }
+
+        &::after {
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            translate: -50%;
+            content: "";
+            width: 152px;
+            height: 1px;
+            background: var(--text-color-hover);
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+// Mail
+.mail {
+    margin-top: 150px;
+    background-image: url(../../assets/img/mail-img/mail-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-inner {
+        @extend %flexItemCenter;
+        justify-content: space-between;
+        padding: 70px 0;
+    }
+
+    &-content {
+        width: 35%;
+
+        &__title {
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 1.25;
+        }
+
+        &__desc {
+            line-height: 1.62;
+        }
+    }
+
+    &-form {
+        padding-bottom: 28px;
+        border-bottom: 1px solid #fff;
+
+        &__input::placeholder {
+            color: rgba(255, 255, 255, 0.381);
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.62;
+        }
+
+        &__label {
+            padding-right: 230px;
+        }
     }
 }
