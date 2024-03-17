@@ -20,8 +20,16 @@
 .hero {
     @extend %flexItemCenter;
 
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
+
     &__content {
         width: 59%;
+
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
     }
 
     &__sub-title {
@@ -34,12 +42,20 @@
         font-size: 6.4rem;
         line-height: 1.15;
         text-transform: capitalize;
+
+        @include abstracts.screen(lg) {
+            font-size: 3.8rem;
+        }
     }
 
     &__desc {
         width: 75%;
         margin-top: 20px;
         line-height: 1.62;
+
+        @include abstracts.screen(lg) {
+            width: 95%;
+        }
     }
 
     &__link {
@@ -59,25 +75,83 @@
         &-wrap {
             position: relative;
             flex: 1;
+
+            @include abstracts.screen(md) {
+                width: 100%;
+                margin-top: 50px;
+            }
         }
 
         &-large {
             margin-left: 30px;
+            object-fit: cover;
+
+            @include abstracts.screen(lg) {
+                width: 290px;
+            }
+
+            @include abstracts.screen(md) {
+                width: 251px;
+            }
         }
 
         &-small {
             position: absolute;
             top: 65px;
             right: 0px;
+            object-fit: cover;
+
+            @include abstracts.screen(xl) {
+                right: -60px;
+            }
+
+            @include abstracts.screen(lg) {
+                width: 68px;
+                top: 55px;
+                right: -55px;
+            }
+
+            @include abstracts.screen(md) {
+                top: 40px;
+                left: 280px;
+            }
 
             &:nth-child(2) {
                 top: 175px;
                 right: -20px;
+
+                @include abstracts.screen(xl) {
+                    right: -85px;
+                }
+
+                @include abstracts.screen(lg) {
+                    top: 143px;
+                    right: -76px;
+                }
+
+                @include abstracts.screen(md) {
+                    top: 125px;
+                    left: 290px;
+                }
             }
 
             &:nth-child(3) {
                 top: 287px;
                 right: 0px;
+
+                @include abstracts.screen(xl) {
+                    right: -60px;
+                }
+
+                @include abstracts.screen(lg) {
+                    top: 235px;
+                    right: -60px;
+                }
+
+                @include abstracts.screen(md) {
+                    top: 210px;
+                    left: 265px;
+                }
             }
         }
     }
@@ -96,31 +170,46 @@
         font-size: 2.4rem;
         line-height: var(--height);
         text-align: center;
+
+        @include abstracts.screen(lg) {
+            --height: 45px;
+            width: 98px;
+            font-size: 1.8rem;
+        }
+
+        @include abstracts.screen(md) {
+            --height: 37px;
+            width: 85px;
+
+            font-size: 1.6rem;
+        }
     }
 }
 
 // Data
 .data {
-    height: 194px;
-    margin-top: 70px;
+    height: 100%;
+    margin-top: 96px;
     background-image: url(../../assets/img/data-img/data1.png);
     background-size: cover;
     background-repeat: no-repeat;
 
     &__wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 127px;
+        @extend %flexItemCenter;
+        justify-content: space-between;
+        padding: 60px 0;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 50px 57px;
+            gap: 30px;
+        }
     }
 
     &__item {
         @extend %flexItemCenter;
-
-        position: relative;
-        top: 60px;
         gap: 19px;
-        z-index: 1;
     }
 
     &__number {
@@ -140,12 +229,19 @@
 // Time
 .time {
     display: flex;
-    margin-top: 48px;
-    padding: 54px 0;
+    margin-top: 150px;
+
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+    }
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
 
     &-left {
         width: 50%;
-        height: 360px;
+        padding: 119px 0;
 
         display: flex;
         flex-direction: column;
@@ -161,6 +257,10 @@
                 rgba(251, 248, 252, 0.09)
             )
             1;
+
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
 
         &__title {
             font-weight: 500;
@@ -184,6 +284,10 @@
         color: rgba(17, 17, 20, 1);
         background: var(--text-color-hover);
 
+        @include abstracts.screen(md) {
+            padding: 34px 0;
+        }
+
         &__title {
             font-weight: 500;
             font-size: 2.4rem;
@@ -193,8 +297,9 @@
 
         &__item {
             @extend %flexItemCenter;
+            justify-content: space-between;
             gap: 150px;
-            margin-top: 10px;
+            padding: 10px 0;
         }
 
         &__day {
@@ -210,8 +315,16 @@
 
 // Service
 .service {
-    margin-top: 19px;
-    padding: 61px 0;
+    margin-top: 150px;
+
+    @include abstracts.screen(lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 38px;
+        padding: 40px 0;
+        background: #000;
+    }
 
     &__content {
         @extend %flexItemCenter;
@@ -235,12 +348,23 @@
         display: flex;
         gap: 30px;
         margin-top: 60px;
+
+        @include abstracts.screen(lg) {
+            gap: initial;
+            margin-top: 40px;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__images {
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        @include abstracts.screen(xl) {
+            flex-direction: row;
+        }
     }
 
     &__image {
@@ -249,6 +373,16 @@
             height: 285px;
             object-fit: cover;
             border: 1px solid #fff;
+
+            @include abstracts.screen(xl) {
+                width: 290px;
+                height: 100%;
+            }
+
+            @include abstracts.screen(lg) {
+                width: 339px;
+                height: 260px;
+            }
         }
 
         &--large {
@@ -256,6 +390,42 @@
             height: 600px;
             object-fit: cover;
             border: 1px solid #fff;
+
+            @include abstracts.screen(xl) {
+                width: 290px;
+            }
+
+            @include abstracts.screen(lg) {
+                width: 339px;
+                height: 260px;
+            }
+        }
+    }
+}
+
+.service-tab {
+    margin-top: 30px;
+    gap: 8px;
+
+    &__item {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #6b6a6a;
+        cursor: pointer;
+
+        &--active {
+            width: 18px;
+            background: #fff;
+            cursor: default;
+        }
+    }
+
+    &__img {
+        display: none;
+
+        &--active {
+            display: block;
         }
     }
 }
@@ -264,7 +434,12 @@
 .booking {
     position: relative;
     display: flex;
-    margin-top: 105px;
+    margin-top: 150px;
+
+    @include abstracts.screen(lg) {
+        flex-direction: column;
+        margin-top: 70px;
+    }
 
     &__wow {
         position: absolute;
@@ -278,6 +453,13 @@
         padding: 40px;
         background: var(--text-color-hover);
         color: #111114;
+
+        @include abstracts.screen(lg) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
 
         &__title {
             color: #111114;
@@ -305,13 +487,22 @@
                 color: var(--text-color-hover);
                 transition: 0.25s;
             }
+
+            @include abstracts.screen(md) {
+                margin-top: 50px;
+            }
         }
     }
 
     &-right {
         width: 50%;
 
+        @include abstracts.screen(lg) {
+            width: 100%;
+        }
+
         &__img {
+            width: 100%;
             height: 394px;
             object-fit: cover;
             background: linear-gradient(
@@ -328,6 +519,10 @@
     @extend %flexItemCenter;
     gap: 99px;
     margin-top: 40px;
+
+    @include abstracts.screen(md) {
+        margin-top: 18px;
+    }
 }
 
 .booking-container {
@@ -337,6 +532,10 @@
         font-weight: 500;
         line-height: 1.41;
         text-transform: capitalize;
+
+        @include abstracts.screen(md) {
+            font-size: 2rem;
+        }
     }
 
     &__wrap {
@@ -375,9 +574,17 @@
 .daily {
     margin-top: 150px;
 
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+    }
+
     &-content {
         margin-bottom: 52px;
         text-align: center;
+
+        @include abstracts.screen(lg) {
+            margin-bottom: 40px;
+        }
 
         &__title {
             font-size: 6.4rem;
@@ -389,14 +596,14 @@
 
     &-container {
         &__wraps {
-            height: 434px;
+            height: 100%;
             padding: 23px 30px;
             background-image: url(../../assets/img/daily-img/daily-bg.png);
             background-size: cover;
         }
 
         &__wrap {
-            padding: 72px 245px 40px 41px;
+            padding: 72px 0 40px 41px;
             border-width: 1px;
             border-style: solid;
             border-image: linear-gradient(
@@ -428,8 +635,13 @@
         }
 
         &__desc {
+            width: 45%;
             margin-top: 8px;
             line-height: 1.62;
+
+            @include abstracts.screen(xl) {
+                width: 55%;
+            }
         }
 
         &__btn {
@@ -455,10 +667,19 @@
         @extend %flexItemCenter;
         gap: 28px;
 
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+        }
+
         &__img {
             width: 130px;
             height: 120px;
             object-fit: cover;
+
+            @include abstracts.screen(lg) {
+                width: 100%;
+                height: 314px;
+            }
         }
 
         &__inner {
@@ -472,12 +693,24 @@
             font-weight: 500;
             line-height: 1.41;
             text-transform: capitalize;
+
+            @include abstracts.screen(sm) {
+                font-size: 2.2rem;
+            }
         }
 
         &__desc {
             width: 80%;
             margin-top: 16px;
             line-height: 1.62;
+
+            @include abstracts.screen(xl) {
+                width: 95%;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.4rem;
+            }
         }
 
         &__price {
@@ -485,12 +718,20 @@
             font-size: 3rem;
             font-weight: 500;
             line-height: 1.33;
+
+            @include abstracts.screen(sm) {
+                font-size: 2.2rem;
+            }
         }
     }
 }
 
 .daily-box + .daily-box {
     margin-top: 36px;
+
+    @include abstracts.screen(xl) {
+        margin-top: 26px;
+    }
 }
 
 // Cook

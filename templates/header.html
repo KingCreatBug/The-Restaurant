@@ -1,6 +1,16 @@
 <div class="container">
     <div class="header__inner">
-        <nav class="navbar">
+        <!-- More -->
+        <button class="navbar__more d-none d-md-block">
+            <img
+                src="./assets/icons/more.svg"
+                alt=""
+                class="navbar__more--img"
+            />
+        </button>
+
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar d-md-none">
             <ul class="navbar__list">
                 <li>
                     <a href="#" class="navbar__link">Home</a>
@@ -19,11 +29,15 @@
                 </li>
             </ul>
         </nav>
+        <!-- <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div> -->
+
+        <!-- Logo -->
         <a href="/">
             <img src="./assets/img/logo.svg" alt="" class="header__logo" />
         </a>
+
         <div class="header-right">
-            <p class="header-right__times">11:24 we’re open</p>
+            <p class="header-right__times d-lg-none">11:24 we’re open</p>
             <a href="#!" class="header-right__link">Table Reservation</a>
         </div>
     </div>

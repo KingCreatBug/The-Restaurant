@@ -5,6 +5,13 @@
     align-items: center;
 }
 
+%underline {
+    -webkit-text-decoration: var(--text-color-second) solid underline;
+    text-decoration: var(--text-color-second) solid underline;
+    -webkit-text-underline-position: under;
+    text-underline-position: under;
+}
+
 .header {
     padding-top: 30px;
 
@@ -23,7 +30,21 @@
         }
 
         &__link:hover {
-            text-decoration: underline;
+            @extend %underline;
+        }
+    }
+
+    &__logo {
+        display: block;
+
+        @include abstracts.screen(md) {
+            position: relative;
+            top: 0;
+            left: 90px;
+        }
+
+        @include abstracts.screen(md) {
+            left: 30px;
         }
     }
 }
