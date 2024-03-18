@@ -738,6 +738,10 @@
 .cook {
     margin-top: 150px;
 
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+    }
+
     &-content {
         @extend %flexItemCenter;
         flex-direction: column;
@@ -748,12 +752,20 @@
             font-weight: 500;
             line-height: 1.15;
             text-transform: capitalize;
+
+            @include abstracts.screen(md) {
+                font-size: 3.4rem;
+            }
         }
 
         &__desc {
             width: 66%;
             margin-top: 16px;
             line-height: 1.62;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
         }
     }
 
@@ -773,6 +785,8 @@
 
         &__img {
             width: 100%;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         &__name {
@@ -788,6 +802,10 @@
 .post {
     margin-top: 150px;
 
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+    }
+
     &-content {
         text-align: center;
 
@@ -801,14 +819,33 @@
             font-weight: 500;
             line-height: 1.15;
             text-transform: capitalize;
+
+            @include abstracts.screen(lg) {
+                font-size: 3.4rem;
+            }
         }
     }
 
     &-wrap {
         margin-top: 60px;
 
+        @include abstracts.screen(lg) {
+            margin-top: 40px;
+        }
+
+        &__bottom {
+            margin-top: 60px;
+
+            @include abstracts.screen(md) {
+                display: flex;
+                flex-direction: column-reverse;
+                margin-top: 20px;
+            }
+        }
+
         &__img {
             width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -821,6 +858,11 @@
             font-size: 3rem;
             font-weight: 500;
             line-height: 1.33;
+
+            @include abstracts.screen(lg) {
+                margin-top: 16px;
+                font-size: 2.4rem;
+            }
         }
 
         &__desc {
@@ -828,6 +870,10 @@
             font-size: 1.8rem;
             font-weight: 600;
             line-height: 1.55;
+
+            @include abstracts.screen(lg) {
+                font-size: 1.4rem;
+            }
         }
 
         &__link {
@@ -847,6 +893,10 @@
         @extend %flexItemCenter;
         gap: 111px;
         margin-top: 30px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 28px;
+        }
     }
 
     &-link {
@@ -855,6 +905,10 @@
         justify-content: center;
         gap: 10px;
         margin-top: 40px;
+
+        @include abstracts.screen(md) {
+            margin-top: 50px;
+        }
 
         &__text {
             color: var(--text-color-hover);
@@ -888,25 +942,50 @@
         @extend %flexItemCenter;
         justify-content: space-between;
         padding: 70px 0;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+        }
     }
 
     &-content {
         width: 35%;
 
+        @include abstracts.screen(md) {
+            text-align: center;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 80%;
+        }
+
         &__title {
             font-size: 4rem;
             font-weight: 500;
             line-height: 1.25;
+
+            @include abstracts.screen(md) {
+                font-size: 3.4rem;
+            }
         }
 
         &__desc {
             line-height: 1.62;
+
+            @include abstracts.screen(md) {
+                margin-top: 14px;
+                font-size: 1.4rem;
+            }
         }
     }
 
     &-form {
         padding-bottom: 28px;
         border-bottom: 1px solid #fff;
+
+        @include abstracts.screen(md) {
+            margin-top: 60px;
+        }
 
         &__input::placeholder {
             color: rgba(255, 255, 255, 0.381);
@@ -917,6 +996,10 @@
 
         &__label {
             padding-right: 230px;
+
+            @include abstracts.screen(lg) {
+                padding-right: 120px;
+            }
         }
     }
 }

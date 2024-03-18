@@ -9,10 +9,22 @@
     margin-top: 150px;
     padding-bottom: 40px;
 
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+    }
+
     &__inner {
         display: flex;
         align-items: flex-start;
         gap: 77px;
+
+        @include abstracts.screen(xl) {
+            gap: 40px;
+        }
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+        }
     }
 
     &__logo {
@@ -29,6 +41,10 @@
         margin-top: 76px;
         width: 211px;
         line-height: 1.62;
+
+        @include abstracts.screen(lg) {
+            margin-top: 30px;
+        }
     }
 
     &__download {
@@ -38,8 +54,21 @@
     }
 
     &__wrap {
-        display: flex;
-        gap: 73px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 70px;
+
+        @include abstracts.screen(xl) {
+            gap: 40px;
+        }
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include abstracts.screen(sm) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__title {

@@ -1293,23 +1293,39 @@
             <!-- Slider -->
             <div class="slider">
                 <div class="slider-wraps">
-                    <div class="slide-wrap">
-                        <img src="./assets/icons/service-icon.svg" alt="" />
+                    <div class="slider-wrap">
+                        <img
+                            class="slider-wrap__img"
+                            src="./assets/icons/service-icon.svg"
+                            alt=""
+                        />
                         <h3 class="slider-wrap__text">Self Services</h3>
                     </div>
 
                     <div class="slider-wrap">
-                        <img src="./assets/icons/food-icon.svg" alt="" />
+                        <img
+                            class="slider-wrap__img"
+                            src="./assets/icons/food-icon.svg"
+                            alt=""
+                        />
                         <h3 class="slider-wrap__text">Best Food</h3>
                     </div>
 
-                    <div class="slider-wrap">
-                        <img src="./assets/icons/deli-icon.svg" alt="" />
+                    <div class="slider-wrap d-sm-none">
+                        <img
+                            class="slider-wrap__img"
+                            src="./assets/icons/deli-icon.svg"
+                            alt=""
+                        />
                         <h3 class="slider-wrap__text">Fast Delivery</h3>
                     </div>
 
-                    <div class="slider-wrap">
-                        <img src="./assets/icons/taste-icon.svg" alt="" />
+                    <div class="slider-wrap d-lg-none">
+                        <img
+                            class="slider-wrap__img"
+                            src="./assets/icons/taste-icon.svg"
+                            alt=""
+                        />
                         <h3 class="slider-wrap__text">Super Taste</h3>
                     </div>
                 </div>
@@ -1333,11 +1349,11 @@
                         <img
                             src="./assets/icons/flower.svg"
                             alt=""
-                            class="cook-list__icon"
+                            class="cook-list__icon d-lg-none"
                         />
-                        <div class="row">
+                        <div class="row gy-3">
                             <!-- cook item 1 -->
-                            <article class="col-4 cook-item">
+                            <article class="col-4 col-md-12 cook-item">
                                 <img
                                     src="./assets/img/cook-img/cook1.png"
                                     alt=""
@@ -1348,7 +1364,7 @@
                             </article>
 
                             <!-- cook item 2 -->
-                            <article class="col-4 cook-item">
+                            <article class="col-4 col-md-12 cook-item">
                                 <img
                                     src="./assets/img/cook-img/cook2.png"
                                     alt=""
@@ -1359,7 +1375,7 @@
                             </article>
 
                             <!-- cook item 3 -->
-                            <article class="col-4 cook-item">
+                            <article class="col-4 col-md-12 cook-item">
                                 <img
                                     src="./assets/img/cook-img/cook3.png"
                                     alt=""
@@ -1382,7 +1398,7 @@
                     <!-- Post wrap 1 -->
                     <div class="row post-wrap">
                         <!-- Post item 1 -->
-                        <div class="col-6">
+                        <div class="col-6 col-md-12">
                             <img
                                 src="./assets/img/post-img/post1.png"
                                 alt=""
@@ -1391,7 +1407,7 @@
                         </div>
 
                         <!-- Post item 2 -->
-                        <div class="col-6">
+                        <div class="col-6 col-md-12">
                             <p class="post-wrap__sub-title">August 6, 2022</p>
                             <h3 class="post-wrap__title">
                                 The Most Expensive Cup of Coffee in the Usa
@@ -1410,9 +1426,9 @@
                     </div>
 
                     <!-- Post wrap 2 -->
-                    <div class="row post-wrap">
+                    <div class="row post-wrap__bottom">
                         <!-- Post item 1 -->
-                        <div class="col-6">
+                        <div class="col-6 col-md-12">
                             <p class="post-wrap__sub-title">August 6, 2022</p>
                             <h3 class="post-wrap__title">
                                 Chicken Soup With Spring Veggies Aand Pasta
@@ -1430,7 +1446,7 @@
                         </div>
 
                         <!-- Post item 2 -->
-                        <div class="col-6">
+                        <div class="col-6 col-md-12">
                             <img
                                 src="./assets/img/post-img/post2.png"
                                 alt=""
@@ -1449,11 +1465,24 @@
             <!-- mail -->
             <div class="mail">
                 <div class="container mail-inner">
-                    <section class="mail-content">
+                    <!-- Mail content PC/Tablet -->
+                    <section class="mail-content d-md-none">
                         <h3 class="mail-content__title">Newsletter</h3>
                         <p class="mail-content__desc">
                             Subscribe to our newsletter and receive 15% discount
                             from your order.
+                        </p>
+                    </section>
+
+                    <!-- Mail content mobile -->
+                    <section class="mail-content d-none d-md-block">
+                        <h3 class="mail-content__title">
+                            Subscribe Newsletter & get letest news
+                        </h3>
+                        <p class="mail-content__desc">
+                            Get insider access to news around the innovations,
+                            unique cooking techniques, culinary concepts,
+                            insights, and more
                         </p>
                     </section>
                     <form action="" class="mail-form">
